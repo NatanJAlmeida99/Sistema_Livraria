@@ -47,4 +47,14 @@ public class Biblioteca {
             System.out.println("Livro de ID " + id + " não encontrado");
         }
     }
+
+    public void cadastrarLivro(String titulo, Autor autor) {
+        livros.add(new Livro(livros.size() + 1, titulo, autor, LocalDate.now()));
+    }
+
+    public Autor cadastrarAutor(String nome, LocalDate dataNascimento) {
+        Autor autor = new Autor(autores.size() + 1 , nome, dataNascimento);
+        autores.add(autor);
+        return autor;
+    }
 }
